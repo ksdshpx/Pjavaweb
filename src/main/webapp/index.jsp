@@ -9,8 +9,12 @@
 <html>
 <head>
     <title>Title</title>
+    <meta http-equiv="refresh" content="3;url=http://www.itcast.cn">
 </head>
 <body>
-
+    跳转
+   <%-- <%
+        int i = 10/0;
+    %>--%>
 </body>
 </html>
