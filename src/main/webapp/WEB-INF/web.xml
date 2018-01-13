@@ -4,4 +4,12 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+    <servlet>
+        <servlet-name>AServlet</servlet-name>
+        <servlet-class>cn.ksdshpx.day09.web.servlet.AServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AServlet</servlet-name>
+        <url-pattern>/AServlet</url-pattern>
+    </servlet-mapping>
 </web-app>
