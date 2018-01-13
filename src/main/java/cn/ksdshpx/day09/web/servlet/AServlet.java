@@ -2,6 +2,7 @@ package cn.ksdshpx.day09.web.servlet;
 
 import javax.servlet.*;
 import java.io.IOException;
+import java.util.Enumeration;
 
 /**
  * Create with IntelliJ IDEA
@@ -13,8 +14,22 @@ import java.io.IOException;
 public class AServlet implements Servlet {
 
     @Override
-    public void init(ServletConfig config) throws ServletException {
+    public void init(ServletConfig servletConfig) throws ServletException {
         System.out.println("init()...");
+        /*
+         *获取初始化参数
+         */
+        System.out.println(servletConfig.getInitParameter("p1"));
+        System.out.println(servletConfig.getInitParameter("p2"));
+
+        /*
+         *获取所有初始化参数的名字
+         */
+        Enumeration initParameterNames = servletConfig.getInitParameterNames();
+        while (initParameterNames.hasMoreElements()) {
+            System.out.println(initParameterNames.nextElement());
+        }
+
     }
 
     @Override

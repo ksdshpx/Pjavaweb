@@ -7,6 +7,14 @@
     <servlet>
         <servlet-name>AServlet</servlet-name>
         <servlet-class>cn.ksdshpx.day09.web.servlet.AServlet</servlet-class>
+        <init-param>
+            <param-name>p1</param-name>
+            <param-value>v1</param-value>
+        </init-param>
+        <init-param>
+            <param-name>p2</param-name>
+            <param-value>v2</param-value>
+        </init-param>
     </servlet>
     <servlet-mapping>
         <servlet-name>AServlet</servlet-name>
