@@ -9,12 +9,16 @@
 <html>
 <head>
     <title>Title</title>
-    <meta http-equiv="refresh" content="3;url=http://www.itcast.cn">
+    <%--<meta http-equiv="refresh" content="3;url=http://www.itcast.cn">--%>
 </head>
 <body>
     跳转
    <%-- <%
         int i = 10/0;
     %>--%>
+    <
+    <form action="/Pjavaweb/CServlet" method="post">
+        <input type="submit" value="提交"/>
+    </form>
 </body>
 </html>
