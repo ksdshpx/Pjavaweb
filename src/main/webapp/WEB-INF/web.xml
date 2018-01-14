@@ -16,8 +16,16 @@
             <param-value>v2</param-value>
         </init-param>
     </servlet>
+    <servlet>
+        <servlet-name>BServlet</servlet-name>
+        <servlet-class>cn.ksdshpx.day09.web.servlet.BServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AServlet</servlet-name>
         <url-pattern>/AServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BServlet</servlet-name>
+        <url-pattern>/BServlet</url-pattern>
     </servlet-mapping>
 </web-app>
