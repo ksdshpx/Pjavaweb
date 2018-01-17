@@ -24,6 +24,11 @@ import java.io.IOException;
  */
 public class CServlet extends HttpServlet {
     @Override
+    public void init() throws ServletException {
+        System.out.println("CServlet Start When Tomcat Start..");
+    }
+
+    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("doGet()...");
     }

@@ -23,6 +23,8 @@
     <servlet>
         <servlet-name>CServlet</servlet-name>
         <servlet-class>cn.ksdshpx.day09.web.servlet.CServlet</servlet-class>
+        <!--服务器启动时就创建Servlet-->
+        <load-on-startup>0</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>AServlet</servlet-name>

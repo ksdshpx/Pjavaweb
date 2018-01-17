@@ -163,4 +163,88 @@ public class POIDemo {
         return cell;
     }
 
+    @Test
+    public void test8() throws Exception{
+        //创建工作簿
+        Workbook workbook = new XSSFWorkbook();
+        //创建Sheet页
+        Sheet sheet = workbook.createSheet("第一个Sheet页");
+        //创建row
+        Row row = sheet.createRow(0);//创建第一行
+        //创建字体
+        Font font = workbook.createFont();
+        font.setFontHeightInPoints((short)24);
+        font.setFontName("Courier New");
+        font.setItalic(true);
+        font.setStrikeout(true);
+        CellStyle cellStyle = workbook.createCellStyle();
+        cellStyle.setFont(font);
+        Cell cell = row.createCell(1);
+        cell.setCellStyle(cellStyle);
+        cell.setCellValue("This is test of fonts");
+        OutputStream outputStream = new FileOutputStream("e:\\HelloExcel.xlsx");
+        workbook.write(outputStream);
+        outputStream.close();
+    }
+
+    @Test
+    public void test9() throws Exception{
+        InputStream in = new FileInputStream("e:\\HelloExcel.xlsx");
+        Workbook workbook = new XSSFWorkbook(in);
+        Sheet sheet = workbook.getSheetAt(0);
+        Row row = sheet.getRow(1);
+        Cell cell = row.getCell(0);
+        if(cell == null){
+            cell = row.createCell(3);
+        }
+        cell.setCellType(Cell.CELL_TYPE_STRING);
+        cell.setCellValue("hello");
+        OutputStream outputStream = new FileOutputStream("e:\\HelloExcel.xlsx");
+        workbook.write(outputStream);
+        outputStream.close();
+    }
+
+    @Test
+    public void test10() throws Exception{
+        //创建工作簿
+        Workbook workbook = new XSSFWorkbook();
+        //创建Sheet页
+        Sheet sheet = workbook.createSheet("第一个Sheet页");
+        //创建row
+        Row row = sheet.createRow(0);//创建第一行
+        //sheet.setDefaultColumnWidth(2*sheet.getDefaultColumnWidth());
+        row.setHeightInPoints(2*sheet.getDefaultRowHeightInPoints());
+        Cell cell = row.createCell(2);
+        cell.setCellValue("我要换行 \n 成功了吗？");
+        CellStyle cellStyle = workbook.createCellStyle();
+        cellStyle.setWrapText(true);
+        cell.setCellStyle(cellStyle);
+        OutputStream outputStream = new FileOutputStream("e:\\HelloExcel.xlsx");
+        workbook.write(outputStream);
+        outputStream.close();
+    }
+
+    @Test
+    public void test11() throws Exception{
+        //创建工作簿
+        Workbook workbook = new XSSFWorkbook();
+        //创建Sheet页
+        Sheet sheet = workbook.createSheet("第一个Sheet页");
+        //创建row
+        Row row = sheet.createRow(0);//创建第一行
+        Cell cell = row.createCell(0);
+        cell.setCellValue(111111.25);
+        DataFormat format = workbook.createDataFormat();
+        CellStyle cellStyle = workbook.createCellStyle();
+        cellStyle.setDataFormat(format.getFormat("0.0"));
+        cell.setCellStyle(cellStyle);
+
+        cell = row.createCell(1);
+        cell.setCellValue(111111.25);
+        cellStyle.setDataFormat(format.getFormat("#,##0.000"));
+        cell.setCellStyle(cellStyle);
+        OutputStream outputStream = new FileOutputStream("e:\\HelloExcel.xlsx");
+        workbook.write(outputStream);
+        outputStream.close();
+    }
 }
