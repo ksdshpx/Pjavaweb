@@ -24,6 +24,11 @@
             <artifactId>junit</artifactId>
             <version>4.9</version>
         </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>Pjavaweb</finalName>
