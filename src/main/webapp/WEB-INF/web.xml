@@ -67,6 +67,14 @@
         <servlet-name>LServlet</servlet-name>
         <servlet-class>cn.ksdshpx.day10.web.servlet.LServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>MServlet</servlet-name>
+        <servlet-class>cn.ksdshpx.day10.web.servlet.MServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>NServlet</servlet-name>
+        <servlet-class>cn.ksdshpx.day10.web.servlet.NServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AServlet</servlet-name>
         <url-pattern>/AServlet</url-pattern>
@@ -114,6 +122,14 @@
     <servlet-mapping>
         <servlet-name>LServlet</servlet-name>
         <url-pattern>/LServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MServlet</servlet-name>
+        <url-pattern>/MServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NServlet</servlet-name>
+        <url-pattern>/NServlet</url-pattern>
     </servlet-mapping>
 
 </web-app>
