@@ -79,6 +79,10 @@
         <servlet-name>OServlet</servlet-name>
         <servlet-class>cn.ksdshpx.day10.web.servlet.OServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PServlet</servlet-name>
+        <servlet-class>cn.ksdshpx.day10.web.servlet.PServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AServlet</servlet-name>
         <url-pattern>/AServlet</url-pattern>
@@ -138,6 +142,10 @@
     <servlet-mapping>
         <servlet-name>OServlet</servlet-name>
         <url-pattern>/OServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PServlet</servlet-name>
+        <url-pattern>/PServlet</url-pattern>
     </servlet-mapping>
 
 </web-app>
