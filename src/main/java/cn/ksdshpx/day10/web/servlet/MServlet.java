@@ -17,14 +17,16 @@ public class MServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("MServlet");
         /*
-        * 步骤：1.发送302状态码
-        *      2.发送Location头
+         * 步骤：1.发送302状态码
+         *      2.发送Location头
          */
-        response.setStatus(302);
-        response.setHeader("Location",request.getContextPath()+"/NServlet");
+//        response.setStatus(302);
+//        response.setHeader("Location",request.getContextPath()+"/NServlet");
+        //重定向的快捷方式
+        response.sendRedirect(request.getContextPath() + "/NServlet");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        this.doPost(request,response);
+        this.doPost(request, response);
     }
 }
