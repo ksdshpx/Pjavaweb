@@ -87,6 +87,10 @@
         <servlet-name>QServlet</servlet-name>
         <servlet-class>cn.ksdshpx.day10.web.servlet.QServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RServlet</servlet-name>
+        <servlet-class>cn.ksdshpx.day10.web.servlet.RServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AServlet</servlet-name>
         <url-pattern>/AServlet</url-pattern>
@@ -154,6 +158,10 @@
     <servlet-mapping>
         <servlet-name>QServlet</servlet-name>
         <url-pattern>/QServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RServlet</servlet-name>
+        <url-pattern>/RServlet</url-pattern>
     </servlet-mapping>
 
 </web-app>
