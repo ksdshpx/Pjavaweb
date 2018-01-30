@@ -103,6 +103,22 @@
         <servlet-name>UServlet</servlet-name>
         <servlet-class>cn.ksdshpx.day10.web.servlet.UServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>VServlet</servlet-name>
+        <servlet-class>cn.ksdshpx.day10.web.servlet.VServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>WServlet</servlet-name>
+        <servlet-class>cn.ksdshpx.day10.web.servlet.WServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>XServlet</servlet-name>
+        <servlet-class>cn.ksdshpx.day10.web.servlet.XServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>YServlet</servlet-name>
+        <servlet-class>cn.ksdshpx.day10.web.servlet.YServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AServlet</servlet-name>
         <url-pattern>/AServlet</url-pattern>
@@ -186,6 +202,22 @@
     <servlet-mapping>
         <servlet-name>UServlet</servlet-name>
         <url-pattern>/UServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VServlet</servlet-name>
+        <url-pattern>/VServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>WServlet</servlet-name>
+        <url-pattern>/WServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>XServlet</servlet-name>
+        <url-pattern>/XServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>YServlet</servlet-name>
+        <url-pattern>/YServlet</url-pattern>
     </servlet-mapping>
 
 </web-app>
