@@ -119,6 +119,10 @@
         <servlet-name>YServlet</servlet-name>
         <servlet-class>cn.ksdshpx.day10.web.servlet.YServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ZServlet</servlet-name>
+        <servlet-class>cn.ksdshpx.day10.web.servlet.ZServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AServlet</servlet-name>
         <url-pattern>/AServlet</url-pattern>
@@ -218,6 +222,10 @@
     <servlet-mapping>
         <servlet-name>YServlet</servlet-name>
         <url-pattern>/YServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ZServlet</servlet-name>
+        <url-pattern>/ZServlet</url-pattern>
     </servlet-mapping>
 
 </web-app>
