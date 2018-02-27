@@ -21,6 +21,13 @@ public class LoginServlet extends HttpServlet {
         //1.获取表单参数
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        String paramCode = request.getParameter("vcode");
+        String sessionCode = (String) request.getSession().getAttribute("sessionCode");
+        if(!paramCode.equalsIgnoreCase(sessionCode)){
+            request.setAttribute("msg","验证码错误！");
+            request.getRequestDispatcher("/session/login.jsp").forward(request,response);
+            return;
+        }
         //2.判断参数是否正确
         if ("ksdshpx".equals(username) && "123".equals(password)) {//登录成功
             //保存用户名到客户端浏览器

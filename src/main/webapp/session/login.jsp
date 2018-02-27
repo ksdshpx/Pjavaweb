@@ -6,9 +6,11 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>登录页面</title>
+    <<%--cript src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>--%>
     <style type="text/css">
        #msgDiv{
            color: red;
@@ -35,7 +37,13 @@
     <form action="<%=request.getContextPath()%>/LoginServlet" method="post">
         用户名:<input type="text" name="username" value="<%=uname%>"/><br/>
         密 码:<input type="password" name="password"/><br/>
+        验证码:<input type="text" name="vcode" size="3"/><img id="img" src="<%=request.getContextPath()%>/VerifyCodeServlet"/><a href="#" onclick="_changeVerifyCode();">看不清,换一张</a><br/>
         <input type="submit" value="登录"/>
     </form>
 </body>
+<script type="text/javascript">
+    function _changeVerifyCode(){
+        document.getElementById("img").src = "<%=request.getContextPath()%>/VerifyCodeServlet?t="+new Date().getTime();
+    }
+</script>
 </html>

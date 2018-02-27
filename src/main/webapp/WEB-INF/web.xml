@@ -131,6 +131,10 @@
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>cn.ksdshpx.day11.web.servlet.LoginServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>VerifyCodeServlet</servlet-name>
+        <servlet-class>cn.ksdshpx.day12.web.servlet.VerifyCodeServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AServlet</servlet-name>
         <url-pattern>/AServlet</url-pattern>
@@ -242,6 +246,10 @@
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VerifyCodeServlet</servlet-name>
+        <url-pattern>/VerifyCodeServlet</url-pattern>
     </servlet-mapping>
 
 </web-app>
