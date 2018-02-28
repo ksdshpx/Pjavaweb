@@ -18,6 +18,7 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //解决post请求的中文乱码问题
         request.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html;charset=UTF-8");
         //1.获取表单参数
         String username = request.getParameter("username");
         String password = request.getParameter("password");
