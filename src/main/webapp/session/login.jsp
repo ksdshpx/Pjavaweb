@@ -20,7 +20,7 @@
     </script>
     <style type="text/css">
        #msgDiv{
-           color: red;
+           color: green;
        }
     </style>
 </head>
