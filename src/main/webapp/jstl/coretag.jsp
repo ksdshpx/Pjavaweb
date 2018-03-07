@@ -19,5 +19,9 @@
     <c:set var="code" value="<script>alert('hello');</script>"/>
     <c:remove var="code"/>
     <c:out value="${code}" escapeXml="false"/>
+    <c:url value="/index.jsp"/><br/>
+    <c:url value="/index.jsp">
+        <c:param name="username" value="张三"/>
+    </c:url>
 </body>
 </html>
