@@ -23,5 +23,18 @@
     <c:url value="/index.jsp">
         <c:param name="username" value="张三"/>
     </c:url>
+    <hr/>
+    <c:if test="${empty param.name}">
+        您没有给出name参数！
+    </c:if>
+    <hr/>
+    <c:choose>
+        <c:when test="${empty param.name}">
+            您没有给出name参数！
+        </c:when>
+        <c:otherwise>
+            参数为:${param.name}
+        </c:otherwise>
+    </c:choose>
 </body>
 </html>
