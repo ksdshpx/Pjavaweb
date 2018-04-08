@@ -1,4 +1,4 @@
-<%--
+<%@ page import="java.util.ArrayList" %><%--
   Created by IntelliJ IDEA.
   User: south
   Date: 2018/3/7
@@ -36,5 +36,30 @@
             参数为:${param.name}
         </c:otherwise>
     </c:choose>
+
+    <hr/>
+    <c:forEach var="i" begin="1" end="10" step="2">
+        ${i}
+    </c:forEach>
+    <hr/>
+    <%
+        String[] strs = {"one","two"};
+        request.setAttribute("strs",strs);
+    %>
+    <c:forEach items="${strs}" var="str">
+        ${str}
+    </c:forEach>
+    <hr/>
+    <%
+        ArrayList<String> list = new ArrayList<>();
+        list.add("一");
+        list.add("二");
+        list.add("三");
+        pageContext.setAttribute("list",list);
+    %>
+    <c:forEach items="${list}" var="ele" varStatus="vs">
+        第${vs.index}个元素是:${ele},是否为第一个元素：${vs.first},
+        是否为最后一个元素：${vs.last},总共${vs.count}个元素。<br/>
+    </c:forEach>
 </body>
 </html>
