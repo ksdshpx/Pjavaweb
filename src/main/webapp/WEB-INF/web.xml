@@ -135,6 +135,10 @@
         <servlet-name>VerifyCodeServlet</servlet-name>
         <servlet-class>cn.ksdshpx.day12.web.servlet.VerifyCodeServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>MyVelocityViewServlet</servlet-name>
+        <servlet-class>cn.ksdshpx.velocity.MyVelocityViewServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AServlet</servlet-name>
         <url-pattern>/AServlet</url-pattern>
@@ -250,6 +254,10 @@
     <servlet-mapping>
         <servlet-name>VerifyCodeServlet</servlet-name>
         <url-pattern>/VerifyCodeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MyVelocityViewServlet</servlet-name>
+        <url-pattern>/MyVelocityViewServlet</url-pattern>
     </servlet-mapping>
 
     <error-page>
