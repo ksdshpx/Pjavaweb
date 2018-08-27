@@ -24,8 +24,9 @@ public class JndiServlet extends HttpServlet {
             DataSource dataSource = (DataSource) initCxt.lookup("java:comp/env/jdbc/c3p0");
             Connection conn = dataSource.getConnection();
             System.out.println(conn);
+            conn.close();
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 
