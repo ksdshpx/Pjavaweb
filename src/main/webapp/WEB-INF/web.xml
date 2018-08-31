@@ -143,6 +143,10 @@
         <servlet-name>JndiServlet</servlet-name>
         <servlet-class>cn.ksdshpx.jndi.JndiServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>TestBaseServlet</servlet-name>
+        <servlet-class>cn.ksdshpx.day18.web.servlet.TestBaseServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AServlet</servlet-name>
         <url-pattern>/AServlet</url-pattern>
@@ -266,6 +270,10 @@
     <servlet-mapping>
         <servlet-name>JndiServlet</servlet-name>
         <url-pattern>/JndiServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TestBaseServlet</servlet-name>
+        <url-pattern>/TestBaseServlet</url-pattern>
     </servlet-mapping>
 
     <error-page>
