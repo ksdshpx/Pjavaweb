@@ -147,6 +147,10 @@
         <servlet-name>TestBaseServlet</servlet-name>
         <servlet-class>cn.ksdshpx.day18.web.servlet.TestBaseServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ClassLoaderServlet</servlet-name>
+        <servlet-class>cn.ksdshpx.classloader.ClassLoaderServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AServlet</servlet-name>
         <url-pattern>/AServlet</url-pattern>
@@ -274,6 +278,10 @@
     <servlet-mapping>
         <servlet-name>TestBaseServlet</servlet-name>
         <url-pattern>/TestBaseServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ClassLoaderServlet</servlet-name>
+        <url-pattern>/ClassLoaderServlet</url-pattern>
     </servlet-mapping>
 
     <error-page>
