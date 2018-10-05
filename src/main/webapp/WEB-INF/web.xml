@@ -9,6 +9,9 @@
         <param-name>context-param</param-name>
         <param-value>context-value</param-value>
     </context-param>
+    <listener>
+        <listener-class>cn.ksdshpx.day20.web.listener.AListener</listener-class>
+    </listener>
     <servlet>
         <servlet-name>AServlet</servlet-name>
         <servlet-class>cn.ksdshpx.day09.web.servlet.AServlet</servlet-class>
