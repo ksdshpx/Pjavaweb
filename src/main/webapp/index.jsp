@@ -20,5 +20,10 @@
     <form action="/Pjavaweb/CServlet" method="post">
         <input type="submit" value="提交"/>
     </form>
+
+    <%
+        application.setAttribute("xxx","XXX");
+        application.removeAttribute("xxx");
+    %>
 </body>
 </html>

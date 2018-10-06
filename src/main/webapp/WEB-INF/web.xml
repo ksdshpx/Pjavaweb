@@ -12,6 +12,9 @@
     <listener>
         <listener-class>cn.ksdshpx.day20.web.listener.AListener</listener-class>
     </listener>
+    <listener>
+        <listener-class>cn.ksdshpx.day20.web.listener.BListener</listener-class>
+    </listener>
     <servlet>
         <servlet-name>AServlet</servlet-name>
         <servlet-class>cn.ksdshpx.day09.web.servlet.AServlet</servlet-class>
