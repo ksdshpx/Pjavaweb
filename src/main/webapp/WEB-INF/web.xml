@@ -9,11 +9,18 @@
         <param-name>context-param</param-name>
         <param-value>context-value</param-value>
     </context-param>
+    <filter>
+        <filter-name>IPFilter</filter-name>
+        <filter-class>cn.ksdshpx.day21.web.filter.IPFilter</filter-class>
+    </filter>
     <listener>
         <listener-class>cn.ksdshpx.day20.web.listener.AListener</listener-class>
     </listener>
     <listener>
         <listener-class>cn.ksdshpx.day20.web.listener.BListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>cn.ksdshpx.day21.web.filter.IPListener</listener-class>
     </listener>
     <servlet>
         <servlet-name>AServlet</servlet-name>
@@ -157,6 +164,11 @@
         <servlet-name>ClassLoaderServlet</servlet-name>
         <servlet-class>cn.ksdshpx.classloader.ClassLoaderServlet</servlet-class>
     </servlet>
+
+    <filter-mapping>
+        <filter-name>IPFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
     <servlet-mapping>
         <servlet-name>AServlet</servlet-name>
         <url-pattern>/AServlet</url-pattern>
