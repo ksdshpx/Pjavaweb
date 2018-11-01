@@ -12,7 +12,7 @@
     <title>分IP统计访问次数</title>
 </head>
 <body>
-<table>
+<table border="1">
     <thead>
     <tr>
         <td>ip地址</td>
