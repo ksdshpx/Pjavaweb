@@ -16,14 +16,15 @@ import java.io.IOException;
 public class AccessControlServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
-        if (username.contains("ksdshpx")){
-            request.getSession().setAttribute("admin",username);
-        }else{
-            request.getSession().setAttribute("username",username);
+        if (username.contains("ksdshpx")) {
+            request.getSession().setAttribute("admin", username);
+        } else {
+            request.getSession().setAttribute("username", username);
         }
+        request.getRequestDispatcher("/all.jsp").forward(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        this.doPost(request,response);
+        this.doPost(request, response);
     }
 }

@@ -18,7 +18,8 @@ public class UserFilter implements Filter {
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
         HttpServletRequest request = (HttpServletRequest) req;
         String username = (String) request.getSession().getAttribute("username");
-        if (username == null) {
+        String admin = (String) request.getSession().getAttribute("admin");
+        if (username == null && admin == null) {
             request.setAttribute("errorMsg", "您只是游客！！！");
             request.getRequestDispatcher("/login.jsp").forward(req, resp);
             return;

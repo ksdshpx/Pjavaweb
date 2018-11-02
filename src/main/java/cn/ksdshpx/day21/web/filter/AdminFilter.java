@@ -18,8 +18,14 @@ public class AdminFilter implements Filter {
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
         HttpServletRequest request = (HttpServletRequest) req;
         String admin = (String) request.getSession().getAttribute("admin");
+        String username = (String) request.getSession().getAttribute("username");
+        if (username == null) {
+            request.setAttribute("errorMsg", "您只是游客！！！");
+            request.getRequestDispatcher("/login.jsp").forward(req, resp);
+            return;
+        }
         if (admin == null) {
-            request.setAttribute("errorMsg", "您不是管理员！！！");
+            request.setAttribute("errorMsg", "您只是会员，不是管理员！！！");
             request.getRequestDispatcher("/login.jsp").forward(req, resp);
             return;
         }
