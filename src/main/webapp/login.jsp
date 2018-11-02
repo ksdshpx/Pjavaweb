@@ -17,7 +17,8 @@
         ResourceBundle resourceBundle = ResourceBundle.getBundle("res",locale);
     %>
     <h1><%=resourceBundle.getString("login")%></h1>
-    <form action="" method="post">
+    ${requestScope.errorMsg}
+    <form action="<c:url value='/AccessControlServlet'/>" method="post">
         <%=resourceBundle.getString("username")%>:<input type="text" name="username"/>
         <%=resourceBundle.getString("password")%>:<input type="password" name="password"/>
         <input type="submit" value="<%=resourceBundle.getString("login")%>"/>
