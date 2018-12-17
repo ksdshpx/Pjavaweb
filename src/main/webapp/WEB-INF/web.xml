@@ -183,6 +183,10 @@
         <servlet-name>FullEncodeServlet</servlet-name>
         <servlet-class>cn.ksdshpx.day21.web.filter.FullEncodeServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>BookServlet</servlet-name>
+        <servlet-class>cn.ksdshpx.pagestatic.servlet.BookServlet</servlet-class>
+    </servlet>
 
     <filter-mapping>
         <filter-name>IPFilter</filter-name>
@@ -342,6 +346,11 @@
     <servlet-mapping>
         <servlet-name>FullEncodeServlet</servlet-name>
         <url-pattern>/FullEncodeServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>BookServlet</servlet-name>
+        <url-pattern>/BookServlet</url-pattern>
     </servlet-mapping>
 
     <error-page>

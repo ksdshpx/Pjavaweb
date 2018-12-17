@@ -9,7 +9,7 @@ import java.io.IOException;
  * Create by peng.x
  * Date: 2018/12/12
  * Time: 13:46
- * Description:
+ * Description:全站编码过滤器
  */
 public class EncodingFilter implements Filter {
     public void destroy() {
