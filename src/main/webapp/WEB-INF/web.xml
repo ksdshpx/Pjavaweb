@@ -9,6 +9,10 @@
         <param-value>context-value</param-value>
     </context-param>
     <filter>
+        <filter-name>PageStaticFilter</filter-name>
+        <filter-class>cn.ksdshpx.pagestatic.filter.PageStaticFilter</filter-class>
+    </filter>
+    <filter>
         <filter-name>IPFilter</filter-name>
         <filter-class>cn.ksdshpx.day21.web.filter.IPFilter</filter-class>
     </filter>
@@ -189,14 +193,19 @@
     </servlet>
 
     <filter-mapping>
+        <filter-name>PageStaticFilter</filter-name>
+        <servlet-name>BookServlet</servlet-name>
+    </filter-mapping>
+
+    <filter-mapping>
         <filter-name>IPFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
-    <filter-mapping>
+    <!--<filter-mapping>
         <filter-name>EncodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
-    </filter-mapping>
+    </filter-mapping>-->
     <filter-mapping>
         <filter-name>UserFilter</filter-name>
         <url-pattern>/user/*</url-pattern>
@@ -353,12 +362,12 @@
         <url-pattern>/BookServlet</url-pattern>
     </servlet-mapping>
 
-    <error-page>
+    <!--<error-page>
         <error-code>404</error-code>
         <location>/error/error404.jsp</location>
-    </error-page>
-    <error-page>
+    </error-page>-->
+    <!--<error-page>
         <error-code>500</error-code>
         <location>/error/error500.jsp</location>
-    </error-page>
+    </error-page>-->
 </web-app>

@@ -6,14 +6,15 @@
   Time: 11:04
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <html>
 <head>
     <title>图书列表</title>
+    <meta charset="UTF-8"/>
 </head>
 <body>
     <h1 align="center">图书列表</h1>
-    <table>
+    <table border="1" cellspacing="0" width="50%" align="center">
         <tr>
             <th>书名</th>
             <th>单价</th>
@@ -21,13 +22,13 @@
         </tr>
         <c:forEach items="${beanList}" var="book">
             <tr>
-                <td>${beanList.bname}</td>
-                <td>${beanList.price}</td>
+                <td>${book.bname}</td>
+                <td>${book.price}</td>
                 <td>
                     <c:choose>
-                        <c:when test="${beanList.category eq 1}"><p style="color: red">JavaSE</p></c:when>
-                        <c:when test="${beanList.category eq 2}"><p style="color: blue">JavaSE</p></c:when>
-                        <c:when test="${beanList.category eq 3}"><p style="color: green">JavaSE</p></c:when>
+                        <c:when test="${book.category eq 1}"><p style="color: red">JavaSE</p></c:when>
+                        <c:when test="${book.category eq 2}"><p style="color: blue">JavaEE</p></c:when>
+                        <c:when test="${book.category eq 3}"><p style="color: green">JavaFrameWork</p></c:when>
                     </c:choose>
                 </td>
             </tr>
