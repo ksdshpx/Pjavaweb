@@ -191,6 +191,10 @@
         <servlet-name>BookServlet</servlet-name>
         <servlet-class>cn.ksdshpx.pagestatic.servlet.BookServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Upload1Servlet</servlet-name>
+        <servlet-class>cn.ksdshpx.day22.web.servlet.Upload1Servlet</servlet-class>
+    </servlet>
 
     <filter-mapping>
         <filter-name>PageStaticFilter</filter-name>
@@ -360,6 +364,11 @@
     <servlet-mapping>
         <servlet-name>BookServlet</servlet-name>
         <url-pattern>/BookServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Upload1Servlet</servlet-name>
+        <url-pattern>/Upload1Servlet</url-pattern>
     </servlet-mapping>
 
     <!--<error-page>
