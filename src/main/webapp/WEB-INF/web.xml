@@ -195,6 +195,10 @@
         <servlet-name>Upload1Servlet</servlet-name>
         <servlet-class>cn.ksdshpx.day22.web.servlet.Upload1Servlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Upload2Servlet</servlet-name>
+        <servlet-class>cn.ksdshpx.day22.web.servlet.Upload2Servlet</servlet-class>
+    </servlet>
 
     <filter-mapping>
         <filter-name>PageStaticFilter</filter-name>
@@ -369,6 +373,11 @@
     <servlet-mapping>
         <servlet-name>Upload1Servlet</servlet-name>
         <url-pattern>/Upload1Servlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Upload2Servlet</servlet-name>
+        <url-pattern>/Upload2Servlet</url-pattern>
     </servlet-mapping>
 
     <!--<error-page>
